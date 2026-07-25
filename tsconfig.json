@@ -1,44 +1,70 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
-  "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    "compilerOptions": {
+        /* Language */
+        "target": "ES2022",
+        "module": "CommonJS",
+        "lib": ["ES2022", "DOM"],
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+        /* Project */
+        "rootDir": ".",
+        "outDir": "./dist",
 
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+        /* Module Resolution */
+        "moduleResolution": "Node",
+        "baseUrl": ".",
 
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+        "paths": {
+            "@config/*": ["config/*"],
+            "@pages/*": ["pages/*"],
+            "@helpers/*": ["helpers/*"],
+            "@fixtures/*": ["fixtures/*"],
+            "@utils/*": ["utils/*"],
+            "@locators/*": ["locators/*"],
+            "@tests/*": ["tests/*"],
+            "@steps/*": ["step-definitions/*"],
+            "@features/*": ["features/*"],
+            "@crawler/*": ["crawler/*"],
+            "@knowledge/*": ["knowledge/*"],
+            "@prompts/*": ["prompts/*"]
+        },
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
+        /* JavaScript Support */
+        "allowJs": false,
 
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
-  }
+        /* Type Checking */
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "forceConsistentCasingInFileNames": true,
+
+        /* Module Interop */
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+
+        /* Source Maps */
+        "sourceMap": true,
+
+        /* Types */
+        "types": [
+            "node",
+            "@playwright/test"
+        ],
+
+        /* Skip */
+        "skipLibCheck": true
+    },
+
+    "include": [
+        "**/*.ts"
+    ],
+
+    "exclude": [
+        "node_modules",
+        "dist",
+        "playwright-report",
+        "test-results"
+    ]
 }

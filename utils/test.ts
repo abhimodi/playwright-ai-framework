@@ -1,0 +1,1 @@
+export const framework = "Playwright AI Framework";
