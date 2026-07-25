@@ -1,5 +1,19 @@
 {
   "name": "playwright-ai-framework",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@faker-js/faker": "^10.5.0",
+    "@playwright/test": "^1.62.0",
+    "@types/node": "^26.1.1",
+    "axios": "^1.18.1",
+    "cross-env": "^10.1.0",
+    "dayjs": "^1.11.21",
+    "dotenv": "^17.4.2",
+    "faker": "^6.6.6",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^7.0.2",
+    "uuid": "^14.0.1"
+  }
 }
