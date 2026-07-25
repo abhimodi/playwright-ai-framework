@@ -1,27 +1,50 @@
 {
-  "name": "playwright-ai-framework",
-  "version": "1.0.0",
-  "description": "Enterprise AI-powered Playwright + TypeScript + Cucumber BDD Automation Framework",
-  "private": true,
-  "license": "MIT",
-  "engines": {
-    "node": ">=24 <25",
-    "npm": ">=11"
-  },
-  "scripts": {
-    "test": "playwright test"
-  },
-  "devDependencies": {
-    "@faker-js/faker": "^10.5.0",
-    "@playwright/test": "^1.62.0",
-    "@types/node": "^26.1.1",
-    "axios": "^1.18.1",
-    "cross-env": "^10.1.0",
-    "dayjs": "^1.11.21",
-    "dotenv": "^17.4.2",
-    "ts-node": "^10.9.2",
-    "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.9.2",
-    "uuid": "^14.0.1"
-  }
+    "name": "playwright-ai-framework",
+    "version": "1.0.0",
+    "description": "Enterprise AI-powered Playwright + TypeScript + Cucumber BDD Automation Framework",
+    "private": true,
+    "license": "MIT",
+    "engines": {
+        "node": ">=24 <25",
+        "npm": ">=11"
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier . --write",
+        "format:check": "prettier . --check",
+        "test": "playwright test",
+        "prepare": "husky"
+    },
+    "lint-staged": {
+        "*.{ts,tsx,js,mjs,cjs}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{json,md,yml,yaml}": [
+            "prettier --write"
+        ]
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.39.5",
+        "@faker-js/faker": "^10.5.0",
+        "@playwright/test": "^1.62.0",
+        "@types/node": "^26.1.1",
+        "axios": "^1.18.1",
+        "cross-env": "^10.1.0",
+        "dayjs": "^1.11.21",
+        "dotenv": "^17.4.2",
+        "eslint": "^9.39.5",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-unused-imports": "^4.4.1",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.4.0",
+        "prettier": "^3.9.6",
+        "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^5.9.2",
+        "typescript-eslint": "^8.65.0",
+        "uuid": "^14.0.1"
+    }
 }
