@@ -1,0 +1,9 @@
+node_modules/
+playwright-report/
+test-results/
+allure-results/
+allure-report/
+dist/
+coverage/
+.env
+.vscode/settings.json
