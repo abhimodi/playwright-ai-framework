@@ -1,7 +1,16 @@
 {
   "name": "playwright-ai-framework",
   "version": "1.0.0",
+  "description": "Enterprise AI-powered Playwright + TypeScript + Cucumber BDD Automation Framework",
   "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=24 <25",
+    "npm": ">=11"
+  },
+  "scripts": {
+    "test": "playwright test"
+  },
   "devDependencies": {
     "@faker-js/faker": "^10.5.0",
     "@playwright/test": "^1.62.0",
@@ -10,10 +19,9 @@
     "cross-env": "^10.1.0",
     "dayjs": "^1.11.21",
     "dotenv": "^17.4.2",
-    "faker": "^6.6.6",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^7.0.2",
+    "typescript": "^5.9.2",
     "uuid": "^14.0.1"
   }
 }
